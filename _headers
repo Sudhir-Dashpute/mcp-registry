@@ -1,12 +1,28 @@
-# CORS headers for all endpoints
+# Global CORS headers for all endpoints
 /*
   Access-Control-Allow-Origin: *
-  Access-Control-Allow-Methods: GET, OPTIONS
-  Access-Control-Allow-Headers: Content-Type, Authorization
+  Access-Control-Allow-Methods: GET, OPTIONS, HEAD
+  Access-Control-Allow-Headers: Content-Type, Authorization, Accept
   Access-Control-Max-Age: 3600
+  X-Content-Type-Options: nosniff
 
-# Specific headers for API endpoints
+# Specific headers for the v0.1 API endpoints
 /v0.1/*
   Content-Type: application/json
-  Access-Control-Allow-Origin:  *
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=300
+
+# Headers specifically for the servers endpoint
+/v0.1/servers/*
+  Content-Type: application/json
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, OPTIONS, HEAD
+  Cache-Control: public, max-age=300
+
+# Explicit headers for index.json
+/v0.1/servers/index.json
+  Content-Type: application/json
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, OPTIONS, HEAD
+  Access-Control-Allow-Headers: Content-Type, Authorization, Accept
   Cache-Control: public, max-age=300
