@@ -153,32 +153,34 @@
               "type": "stdio"
             }
           },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+        "name": "io.github.domdomegg/time-mcp-pypi",
+        "description": "Get the current UTC time in RFC 3339 format.",
+        "repository": {
+          "url": "https://github.com/domdomegg/time-mcp-pypi.git",
+          "source": "github"
+        },
+        "version": "1.0.6",
+        "packages": [
           {
-            "registryType": "npm",
-            "identifier": "shell-exec-mcp",
-            "version": "1.0.0",
-            "runtimeHint": "npx",
+            "registryType": "pypi",
+            "identifier": "time-mcp-pypi",
+            "version": "1.0.6",
+            "runtimeHint": "python",
             "transport": {
-              "type": "streamable-http",
-              "url": "http://localhost:3000/mcp"
-            },
-            "environmentVariables": [
-              {
-                "description": "Transport type.",
-                "isRequired": true,
-                "value": "http",
-                "name": "MCP_TRANSPORT"
-              }
-            ]
+              "type": "stdio"
+            }
           }
         ]
       },
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
-          "publishedAt": "2025-12-14T01:56:25.293629Z",
-          "updatedAt": "2025-12-14T01:56:25.293629Z",
-          "isLatest": true
+          "publishedAt": "2025-09-12T02:14:45.618238Z",
+          "updatedAt": "2025-09-12T02:14:45.618238Z",
+          "isLatest": false
         }
       }
     }
