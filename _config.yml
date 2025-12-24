@@ -1,0 +1,30 @@
+# GitHub Pages Jekyll Configuration
+title: MCP Registry
+description: Private MCP Server Registry for GitHub Copilot
+baseurl: ""
+url: "https://YOUR-USERNAME.github.io"
+
+# Enable serving of files starting with v0.1
+include:
+  - v0.1
+
+# Exclude unnecessary files
+exclude:
+  - README.md
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+
+# Force proper MIME types
+defaults:
+  - scope: 
+      path: "v0.1/servers"
+    values:
+      content_type: "application/json"
+
+# Theme (optional)
+theme: jekyll-theme-minimal
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
