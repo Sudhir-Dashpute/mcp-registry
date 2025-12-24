@@ -1,7 +1,7 @@
 # GitHub Pages Jekyll Configuration
 title: MCP Registry
 description: Private MCP Server Registry for GitHub Copilot
-baseurl: ""
+baseurl: "/mcp-registry"
 url: "https://sudhir-dashpute.github.io"
 
 # Enable serving of v0.1 directory
