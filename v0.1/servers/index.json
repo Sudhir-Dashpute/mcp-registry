@@ -1,0 +1,158 @@
+{
+  "servers": [
+    {
+      "id": "modelcontextprotocol/server-filesystem",
+      "name": "filesystem",
+      "description": "Secure file system access with configurable permissions for reading and writing local files",
+      "vendor": "Anthropic",
+      "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+      "homepage": "https://github.com/modelcontextprotocol/servers",
+      "license": "MIT",
+      "version": "0.5.1",
+      "runtime": {
+        "type": "node",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-filesystem",
+          "/workspace"
+        ],
+        "env": {}
+      },
+      "packages": [
+        {
+          "type": "npm",
+          "name": "@modelcontextprotocol/server-filesystem",
+          "url": "https://www.npmjs.com/package/@modelcontextprotocol/server-filesystem"
+        }
+      ],
+      "categories": ["productivity", "development"],
+      "tags": ["filesystem", "files", "local"]
+    },
+    {
+      "id": "modelcontextprotocol/server-github",
+      "name": "github",
+      "description": "Access GitHub repositories, issues, pull requests, and other GitHub resources through 100+ API endpoints",
+      "vendor": "GitHub",
+      "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
+      "homepage": "https://github.com/modelcontextprotocol/servers",
+      "license": "MIT",
+      "version": "0.4.2",
+      "runtime": {
+        "type": "node",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-github"
+        ],
+        "env":  {
+          "GITHUB_PERSONAL_ACCESS_TOKEN": ""
+        }
+      },
+      "packages": [
+        {
+          "type": "npm",
+          "name": "@modelcontextprotocol/server-github",
+          "url": "https://www.npmjs.com/package/@modelcontextprotocol/server-github"
+        }
+      ],
+      "categories": ["development", "productivity", "cloud"],
+      "tags": ["github", "api", "repositories", "issues", "pull-requests"]
+    },
+    {
+      "id":  "executeautomation/mcp-playwright",
+      "name": "playwright",
+      "description": "Browser automation and web scraping using Playwright.  Enables AI agents to interact with web pages",
+      "vendor": "Community",
+      "sourceUrl": "https://github.com/executeautomation/mcp-playwright",
+      "homepage": "https://github.com/executeautomation/mcp-playwright",
+      "license": "MIT",
+      "version": "1.0.0",
+      "runtime": {
+        "type":  "node",
+        "command":  "npx",
+        "args": [
+          "-y",
+          "@executeautomation/mcp-playwright"
+        ],
+        "env": {}
+      },
+      "packages": [
+        {
+          "type": "npm",
+          "name": "@executeautomation/mcp-playwright",
+          "url": "https://www.npmjs.com/package/@executeautomation/mcp-playwright"
+        }
+      ],
+      "categories": ["automation", "testing", "web"],
+      "tags": ["browser", "automation", "playwright", "web-scraping", "testing"]
+    },
+    {
+      "id": "modelcontextprotocol/server-postgres",
+      "name": "postgres",
+      "description": "Query and interact with PostgreSQL databases.  Supports read and write operations with connection pooling",
+      "vendor":  "Community",
+      "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres",
+      "homepage": "https://github.com/modelcontextprotocol/servers",
+      "license": "MIT",
+      "version": "0.4.0",
+      "runtime": {
+        "type": "node",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-postgres"
+        ],
+        "env": {
+          "POSTGRES_CONNECTION_STRING": ""
+        }
+      },
+      "packages": [
+        {
+          "type": "npm",
+          "name": "@modelcontextprotocol/server-postgres",
+          "url": "https://www.npmjs.com/package/@modelcontextprotocol/server-postgres"
+        }
+      ],
+      "categories": ["data", "database", "storage"],
+      "tags": ["postgresql", "database", "sql", "postgres"]
+    },
+    {
+      "id": "modelcontextprotocol/server-slack",
+      "name": "slack",
+      "description": "Interact with Slack workspaces:  send messages, read channels, manage users and integrations",
+      "vendor": "Community",
+      "sourceUrl":  "https://github.com/modelcontextprotocol/servers/tree/main/src/slack",
+      "homepage": "https://github.com/modelcontextprotocol/servers",
+      "license": "MIT",
+      "version": "0.3.0",
+      "runtime":  {
+        "type": "node",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-slack"
+        ],
+        "env": {
+          "SLACK_BOT_TOKEN": "",
+          "SLACK_TEAM_ID": ""
+        }
+      },
+      "packages": [
+        {
+          "type": "npm",
+          "name": "@modelcontextprotocol/server-slack",
+          "url": "https://www.npmjs.com/package/@modelcontextprotocol/server-slack"
+        }
+      ],
+      "categories": ["productivity", "communication", "automation"],
+      "tags": ["slack", "messaging", "collaboration", "team"]
+    }
+  ],
+  "metadata": {
+    "total": 5,
+    "nextCursor": null,
+    "registryVersion": "0.1.0",
+    "lastUpdated": "2025-12-24T00:00:00Z"
+  }
+}
