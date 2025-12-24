@@ -1,130 +1,100 @@
 {
-  "version": "1.0",
   "servers": [
     {
-      "id": "server-filesystem",
-      "name": "io.github.modelcontextprotocol/server-filesystem",
-      "description": "Secure file system access with configurable permissions for reading and writing local files",
-      "repository": {
-        "url": "https://github.com/modelcontextprotocol/servers",
-        "source": "github"
-      },
-      "version": "0.5.1",
-      "packages": [
-        {
-          "registryType": "npm",
-          "identifier": "@modelcontextprotocol/server-filesystem",
-          "version": "0.5.1",
-          "runtimeHint": "npx",
-          "transport": { "type": "stdio" }
-        }
-      ]
-    },
-    {
-      "id": "server-github",
-      "name": "io.github.modelcontextprotocol/server-github",
-      "description": "Access GitHub repositories, issues, pull requests, and other GitHub resources through 100+ API endpoints",
-      "repository": {
-        "url": "https://github.com/modelcontextprotocol/servers",
-        "source": "github"
-      },
-      "version": "0.4.2",
-      "packages": [
-        {
-          "registryType": "npm",
-          "identifier": "@modelcontextprotocol/server-github",
-          "version": "0.4.2",
-          "runtimeHint": "npx",
-          "transport": { "type": "stdio" },
-          "environmentVariables": [
-            {
-              "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
-              "description": "GitHub Personal Access Token for API authentication",
-              "isRequired": true,
-              "isSecret": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "mcp-playwright",
-      "name": "io.github.executeautomation/mcp-playwright",
-      "description": "Browser automation and web scraping using Playwright. Enables AI agents to interact with web pages",
-      "repository": {
-        "url": "https://github.com/executeautomation/mcp-playwright",
-        "source": "github"
-      },
-      "version": "1.0.0",
-      "packages": [
-        {
-          "registryType": "npm",
-          "identifier": "@executeautomation/mcp-playwright",
-          "version": "1.0.0",
-          "runtimeHint": "npx",
-          "transport": { "type": "stdio" }
-        }
-      ]
-    },
-    {
-      "id": "server-postgres",
-      "name": "io.github.modelcontextprotocol/server-postgres",
-      "description": "Query and interact with PostgreSQL databases. Supports read and write operations with connection pooling",
-      "repository": {
-        "url": "https://github.com/modelcontextprotocol/servers",
-        "source": "github"
-      },
-      "version": "0.4.0",
-      "packages": [
-        {
-          "registryType": "npm",
-          "identifier": "@modelcontextprotocol/server-postgres",
-          "version": "0.4.0",
-          "runtimeHint": "npx",
-          "transport": { "type": "stdio" },
-          "environmentVariables": [
-            {
-              "name": "POSTGRES_CONNECTION_STRING",
-              "description": "PostgreSQL connection string",
-              "isRequired": true,
-              "isSecret": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "server-slack",
-      "name": "io.github.modelcontextprotocol/server-slack",
-      "description": "Interact with Slack workspaces: send messages, read channels, manage users and integrations",
-      "repository": {
-        "url": "https://github.com/modelcontextprotocol/servers",
-        "source": "github"
-      },
-      "version": "0.3.0",
-      "packages": [
-        {
-          "registryType": "npm",
-          "identifier": "@modelcontextprotocol/server-slack",
-          "version": "0.3.0",
-          "runtimeHint": "npx",
-          "transport": { "type": "stdio" },
-          "environmentVariables": [
-            {
-              "name": "SLACK_BOT_TOKEN",
-              "description": "Slack Bot User OAuth Token",
-              "isRequired": true,
-              "isSecret": true
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+        "name": "ai.aliengiraffe/spotdb",
+        "description": "Ephemeral data sandbox for AI workflows with guardrails and security",
+        "repository": {
+          "url": "https://github.com/aliengiraffe/spotdb",
+          "source": "github"
+        },
+        "version": "0.1.0",
+        "packages": [
+          {
+            "registryType": "oci",
+            "identifier": "docker.io/aliengiraffe/spotdb:0.1.0",
+            "transport": {
+              "type": "stdio"
             },
-            {
-              "name": "SLACK_TEAM_ID",
-              "description": "Slack Team/Workspace ID",
-              "isRequired": true,
-              "isSecret": false
-            }
-          ]
+            "environmentVariables": [
+              {
+                "description": "Optional API key for request authentication",
+                "format": "string",
+                "isSecret": true,
+                "name": "X-API-Key"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-10-09T17:05:17.793149Z",
+          "updatedAt": "2025-10-09T17:05:17.793149Z",
+          "isLatest": true
         }
-      ]
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+        "name": "ai.alpic.test/test-mcp-server",
+        "description": "Alpic Test MCP Server - great server!",
+        "repository": {},
+        "version": "0.0.1",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://test.alpic.ai/"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-09-10T13:57:43.256739Z",
+          "updatedAt": "2025-09-10T13:57:43.256739Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+        "name": "ai.cirra/salesforce-mcp",
+        "description": "Comprehensive Salesforce administration and data management capabilities",
+        "title": "Cirra AI Salesforce Admin MCP Server",
+        "repository": {
+          "url": "https://github.com/cirra-ai/mcp-server",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "icons": [
+          {
+            "src": "https://cirra.ai/icon-gradient-onwhite.svg"
+          },
+          {
+            "src": "https://cirra.ai/icon-gradient-onwhite.jpg"
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.cirra.ai/sfdc/mcp"
+          }
+        ],
+        "_meta": {}
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-12-13T01:53:10.483779Z",
+          "updatedAt": "2025-12-13T01:53:10.483779Z",
+          "isLatest": true
+        }
+      }
     }
-  ]
+  ],
 }
