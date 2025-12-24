@@ -1,7 +1,8 @@
 {
+  "version": "1.0",
   "servers": [
     {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+      "id": "server-filesystem",
       "name": "io.github.modelcontextprotocol/server-filesystem",
       "description": "Secure file system access with configurable permissions for reading and writing local files",
       "repository": {
@@ -15,14 +16,12 @@
           "identifier": "@modelcontextprotocol/server-filesystem",
           "version": "0.5.1",
           "runtimeHint": "npx",
-          "transport": {
-            "type": "stdio"
-          }
+          "transport": { "type": "stdio" }
         }
       ]
     },
     {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+      "id": "server-github",
       "name": "io.github.modelcontextprotocol/server-github",
       "description": "Access GitHub repositories, issues, pull requests, and other GitHub resources through 100+ API endpoints",
       "repository": {
@@ -36,9 +35,7 @@
           "identifier": "@modelcontextprotocol/server-github",
           "version": "0.4.2",
           "runtimeHint": "npx",
-          "transport": {
-            "type": "stdio"
-          },
+          "transport": { "type": "stdio" },
           "environmentVariables": [
             {
               "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
@@ -51,7 +48,7 @@
       ]
     },
     {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+      "id": "mcp-playwright",
       "name": "io.github.executeautomation/mcp-playwright",
       "description": "Browser automation and web scraping using Playwright. Enables AI agents to interact with web pages",
       "repository": {
@@ -65,14 +62,12 @@
           "identifier": "@executeautomation/mcp-playwright",
           "version": "1.0.0",
           "runtimeHint": "npx",
-          "transport": {
-            "type": "stdio"
-          }
+          "transport": { "type": "stdio" }
         }
       ]
     },
     {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+      "id": "server-postgres",
       "name": "io.github.modelcontextprotocol/server-postgres",
       "description": "Query and interact with PostgreSQL databases. Supports read and write operations with connection pooling",
       "repository": {
@@ -86,13 +81,11 @@
           "identifier": "@modelcontextprotocol/server-postgres",
           "version": "0.4.0",
           "runtimeHint": "npx",
-          "transport": {
-            "type": "stdio"
-          },
+          "transport": { "type": "stdio" },
           "environmentVariables": [
             {
               "name": "POSTGRES_CONNECTION_STRING",
-              "description": "PostgreSQL connection string (e.g., postgresql://user:password@localhost:5432/database)",
+              "description": "PostgreSQL connection string",
               "isRequired": true,
               "isSecret": true
             }
@@ -101,7 +94,7 @@
       ]
     },
     {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+      "id": "server-slack",
       "name": "io.github.modelcontextprotocol/server-slack",
       "description": "Interact with Slack workspaces: send messages, read channels, manage users and integrations",
       "repository": {
@@ -115,13 +108,11 @@
           "identifier": "@modelcontextprotocol/server-slack",
           "version": "0.3.0",
           "runtimeHint": "npx",
-          "transport": {
-            "type": "stdio"
-          },
+          "transport": { "type": "stdio" },
           "environmentVariables": [
             {
               "name": "SLACK_BOT_TOKEN",
-              "description": "Slack Bot User OAuth Token (starts with xoxb-)",
+              "description": "Slack Bot User OAuth Token",
               "isRequired": true,
               "isSecret": true
             },
