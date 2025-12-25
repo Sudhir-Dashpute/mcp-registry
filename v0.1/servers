@@ -177,9 +177,27 @@
           "isLatest": true
         }
       }
+    },
+    {
+      "server": {
+        "name": "io.github.modelcontextprotocol/filesystem",
+        "version": "2025.11.25",
+        "description": "Secure file operations with configurable access controls",
+        "author": "Model Context Protocol",
+        "repository": {
+          "url": "https://github.com/modelcontextprotocol/servers"
+        },
+        "packages": [
+          {
+            "registryType": "npm",
+            "name": "@modelcontextprotocol/server-filesystem",
+            "version": "2025.11.25"
+          }
+        ]
+      }
     }
   ],
   "metadata": {
-    "count": 5
+    "count": 6
   }
 }
