@@ -190,8 +190,11 @@
         "packages": [
           {
             "registryType": "npm",
-            "name": "@modelcontextprotocol/server-filesystem",
-            "version": "2025.11.25"
+            "identifier": "@modelcontextprotocol/server-filesystem",
+            "version": "2025.11.25",
+            "runtimeHint": "npx",
+            "transport": {
+              "type": "stdio"
           }
         ]
       },
