@@ -195,6 +195,7 @@
             "runtimeHint": "npx",
             "transport": {
               "type": "stdio"
+             }
           }
         ]
       },
